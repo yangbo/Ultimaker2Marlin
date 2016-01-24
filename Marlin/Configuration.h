@@ -10,7 +10,7 @@
 // build by the user have been successfully uploaded into firmware.
 #define STRING_VERSION_CONFIG_H __DATE__ " " __TIME__ // build date and time
 #ifndef STRING_CONFIG_H_AUTHOR
-#define STRING_CONFIG_H_AUTHOR "Version DEV" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "iPandaBot" // Who made the changes.
 #endif
 
 // SERIAL_PORT selects which serial port should be used for communication with the host.
@@ -337,9 +337,9 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 // Travel limits after homing
 #define X_MAX_POS 230
 #define X_MIN_POS 0
-#define Y_MAX_POS 230
+#define Y_MAX_POS 225
 #define Y_MIN_POS 0
-#define Z_MAX_POS 330
+#define Z_MAX_POS 205 //330
 #define Z_MIN_POS 0
 
 #define X_MAX_LENGTH (X_MAX_POS - X_MIN_POS)
@@ -363,7 +363,8 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.0,80.0,200,282}  // default steps per unit for ultimaker2
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.0,80.0,200,282}  // default steps per unit for ultimaker2
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.0,80.0,200,204}  // default steps per unit for iPandaBot
 #define DEFAULT_MAX_FEEDRATE          {300, 300, 40, 45}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
@@ -382,7 +383,8 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 #define DEFAULT_EJERK                 5.0    // (mm/sec)
 
 //Length of the bowden tube. Used for the material load/unload procedure.
-#define FILAMANT_BOWDEN_LENGTH        705
+//#define FILAMANT_BOWDEN_LENGTH        705    // UM2
+#define FILAMANT_BOWDEN_LENGTH        920      // iPandaBot
 
 //===========================================================================
 //=============================Additional Features===========================
