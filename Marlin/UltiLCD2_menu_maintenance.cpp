@@ -479,7 +479,7 @@ static void lcd_menu_maintenance_motion()
         else if (IS_SELECTED_SCROLL(7))
             LCD_EDIT_SETTING(motor_current_setting[1], "Current Z", "mA", 0, 1300);
         else if (IS_SELECTED_SCROLL(8))
-            LCD_EDIT_SETTING(motor_current_setting[2], "Current E", "mA", 0, 1300);
+            LCD_EDIT_SETTING(motor_current_setting[2], "Current E", "mA", 0, 1680);
     }
 }
 
